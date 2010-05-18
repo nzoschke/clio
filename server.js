@@ -1,5 +1,5 @@
-require.paths.unshift('lib')
-require.paths.unshift('lib/express/lib')
+require.paths.unshift(__dirname + '/lib')
+require.paths.unshift(__dirname + '/lib/express/lib')
 
 var sys = require('sys');
 
