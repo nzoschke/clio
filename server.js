@@ -32,6 +32,6 @@ get('/sessions/:id', function(id) {
 run(process.env["SERVER_PORT"] || 8000, '0.0.0.0')
 
 // drop privs
-if (process.env["UID"]) process.setuid(process.env["UID"]);
-if (process.env["GID"]) process.setgid(process.env["GID"]);
+if (process.env["SERVER_GID"]) process.setgid(process.env["SERVER_GID"]);
+if (process.env["SERVER_UID"]) process.setuid(process.env["SERVER_UID"]);
 sys.puts('uid/gid:  ' + process.getuid() + '/' + process.getgid());
